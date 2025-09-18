@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .btn {
+            font-size: 1.6875rem; /* Increased font size by 1.5 times */
+            font-weight: 400; /* Reduced font weight */
+            transform: scale(1);
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            aspect-ratio: 1 / 1;
+            height: 4rem;
+        }
+        
+        /* Specific font size for operation buttons */
+        .btn-op {
+            font-size: 2.025rem; /* 1.2 times 1.6875rem */
+        }
+        
+        .btn-num {
+            @apply bg-gray-200 text-gray-800 hover:bg-gray-300 active:bg-gray-400;
+        }
+        
+        .btn-op-top, .btn-op-right {
+            background-color: #FF8C00; /* Orange color */
+            @apply text-white;
+        }
+
+        .btn-del {
+            @apply bg-gray-400 text-white hover:bg-gray-500 active:bg-gray-600;
+        }
+        
+        .btn-equals {
+            @apply bg-green-500 text-white hover:bg-green-600 active:bg-green-700;
+            border-radius: 9999px;
+            aspect-ratio: auto;
+            height: 4rem;
+            width: 4rem;
+        }
+        
+        .btn-logo {
+            @apply bg-red-500 text-white hover:bg-red-600 active:bg-red-700;
+        }
+
+        /* Override circular shape for the zero button */
+        .btn-zero {
+            border-radius: 9999px;
+            aspect-ratio: auto;
+            height: 4rem;
+            width: 4rem;
+        }
+
+        /* Hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
